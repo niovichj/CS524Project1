@@ -6,4 +6,5 @@ from django.template import loader
 
 def index(request):
     template = loader.get_template('mainpage/index.html')
-    return HttpResponse(template.render({}, request))
+    context = {} # dictionary of variables
+    return HttpResponse(template.render(context, request))
